@@ -36,7 +36,7 @@ namespace WebApi
             }
 
             app.UseCors(builder =>
-            builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString(), "http://localhost:4200", "https://wcccny.azurewebsites.net", "https://www.wcccny.org", "https://wcccny.org")
+            builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString(), "http://localhost:4200", "https://abc.net", "https://www.cbs.org", "https://nbc.org")
             .AllowAnyHeader()
             .AllowAnyMethod()
             );
