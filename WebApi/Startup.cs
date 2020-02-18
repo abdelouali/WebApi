@@ -35,6 +35,12 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder =>
+            builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString(), "http://localhost:4200", "https://wcccny.azurewebsites.net", "https://www.wcccny.org", "https://wcccny.org")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            );
+
             app.UseMvc();
         }
     }
